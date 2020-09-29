@@ -149,11 +149,12 @@ namespace ConvertDataFiles
                 else
                 {                  
                     var MinKolvo = vhogdenieSortByChisloRazrjad.Select(x => x.chisloKolvo).Min();
-
-                   
-                                        kolvoRazrInCC = g.chisloKolvo * g.chisloRazrjad; //Число разрядов конечного числа * число повторов конечного числа
-                    sumBit = kolvoRazrInCC + g.chisloKolvo * 2; //суммарное число бит при замене на конечное число
-
+                //    vhogdenieSortByChisloRazrjad.ElementAt(MinKolvo).
+                 int   kolvoRazrInCC1 = vhogdenieSortByChisloRazrjad.ElementAt(MinKolvo).chisloRazrjad;
+                    int chisloKolvo1 = vhogdenieSortByChisloRazrjad.ElementAt(MinKolvo).chisloKolvo;
+               //     kolvoRazrInCC = g.chisloKolvo * g.chisloRazrjad; //Число разрядов конечного числа * число повторов конечного числа
+                //    sumBit = kolvoRazrInCC + g.chisloKolvo * 2; //суммарное число бит при замене на конечное число
+                 //
 
                     // var ggg = vhogdenie.ToArray();
                     //  while (ggg.Count() > 0)
@@ -168,8 +169,8 @@ namespace ConvertDataFiles
 
                     //while 
                     // int cvv = cv;
-                    kolvoRazrInCC = g.chisloKolvo * g.chisloRazrjad; //Число разрядов конечного числа * число повторов конечного числа
-                    sumBit = kolvoRazrInCC + g.chisloKolvo * 2; //суммарное число бит при замене на конечное число
+             //       kolvoRazrInCC = g.chisloKolvo * g.chisloRazrjad; //Число разрядов конечного числа * число повторов конечного числа
+              //      sumBit = kolvoRazrInCC + g.chisloKolvo * 2; //суммарное число бит при замене на конечное число
                                                                 //
                     if (chisloKolvo > kolvoRazrInCC + sumBit)
                     {
@@ -177,6 +178,8 @@ namespace ConvertDataFiles
                         zamena.Add(new Zamena() { ishod = cv, result = chisloInDecimal });
                         cv++;
                         cc++;
+                        vhogdenieSortByChisloRazrjad.(x => x.chisloKolvo).Min();
+                        //    delete   vhogdenieSortByChisloRazrjad.ElementAt(MinKolvo)
                     }
                     else
                     {
